@@ -9,7 +9,13 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000/apex](http://localhost:3000/apex) (basePath is `/apex` for GitHub Pages).
+
+## Deploy to GitHub Pages (https://chaarvigoel.github.io/apex/)
+
+1. Push this repo to GitHub (e.g. `chaarvigoel/apex`).
+2. In the repo: **Settings → Pages → Build and deployment → Source**: choose **GitHub Actions**.
+3. Push to `main` (or `master`). The workflow [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) will build the static export and deploy it. The live UI will be at **https://chaarvigoel.github.io/apex/**.
 
 ## What’s in this MVP
 
