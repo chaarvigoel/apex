@@ -1,37 +1,26 @@
-# Apex MVP — Performance Engine for Elite Female Athletes
+# Apex
 
-Cycle-aware athletic performance optimization for NCAA Division I & II female athletes in high-impact sports (soccer, basketball, volleyball). Apex is a **tactical service layer**: it syncs with your existing training plan and adjusts load based on individual physiology—not a standalone training plan.
+A **cycle-aware training** concept UI — what a platform could look like that syncs training and recovery with physiology.
 
-## Run locally
+## Live site
 
-```bash
-npm install
-npm run dev
-```
+**https://chaarvigoel.github.io/apex/**
 
-Open [http://localhost:3000/apex](http://localhost:3000/apex) (basePath is `/apex` for GitHub Pages).
+## Host on GitHub Pages
 
-## Deploy to GitHub Pages (https://chaarvigoel.github.io/apex/)
+1. Push this repo to GitHub.
+2. **Settings → Pages → Build and deployment**
+3. **Source:** Deploy from a branch  
+4. **Branch:** `main` (or `master`) · **Folder:** `/ (root)`  
+5. Save. The site will be at `https://<username>.github.io/apex/`
 
-1. Push this repo to GitHub (e.g. `chaarvigoel/apex`).
-2. In the repo: **Settings → Pages → Build and deployment → Source**: choose **GitHub Actions**.
-3. Push to `main` (or `master`). The workflow [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) will build the static export and deploy it. The live UI will be at **https://chaarvigoel.github.io/apex/**.
+No build step. The repo is just `index.html` and `style.css` at the root.
 
-## What’s in this MVP
+## What’s on the page
 
-- **Hero** — Pitch, sub-headline, “Integrate Your Program” CTA
-- **Daily Athlete Dashboard** — Mock view: cycle phase, training intensity (High/Moderate/Recovery), ACL injury-risk alert, tactical S&C adjustment, recovery protocol
-- **Apex Advantage** — Feature grid: Transparency, Safety Necessity, Tactical Integration (vs Wild.AI, Ultrahuman, generic wellness)
-- **Data views** — Placeholders for HRV × cycle phase, RHR × cycle phase, injury risk over 28-day cycle
+- **Hero** — “Train with your physiology, not against it” and a CTA to the dashboard.
+- **Daily dashboard** — Mock cycle strip (Follicular → Ovulatory → Luteal → Menstrual) with “you’re here,” plus cards: today’s focus (moderate intensity), recovery, ACL risk alert, S&C adjustment.
+- **Why Apex** — Three points: cycle-aware not generic, sync with your program, injury risk in mind.
+- **Concept** — Placeholder for HRV/RHR/injury risk across the cycle.
 
-## Stack
-
-- Next.js 14 (App Router), TypeScript, Tailwind CSS
-- Design: high-contrast, data-driven, “Elite Tactical Performance” (no soft wellness-only look)
-
-## Build
-
-```bash
-npm run build
-npm start
-```
+Design: dark theme, DM Sans, emerald accent, clear cards and labels so it feels like a real product preview.

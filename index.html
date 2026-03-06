@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex — Cycle-Aware Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="#" class="logo">Apex</a>
+      <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#how">How it works</a>
+        <a href="#cycle">Your cycle</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="wrap hero-inner">
+        <p class="hero-label">Cycle-aware performance</p>
+        <h1 class="hero-title">Train with your physiology, not against it.</h1>
+        <p class="hero-text">A smarter layer on top of your existing program. See your cycle phase, get daily training and recovery guidance, and reduce injury risk—without changing how you train with your team.</p>
+        <a href="#dashboard" class="btn btn-primary">See your dashboard</a>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section dashboard">
+      <div class="wrap">
+        <h2 class="section-label">Your day at a glance</h2>
+        <p class="section-title">Daily dashboard</p>
+
+        <div class="cycle-strip">
+          <span class="phase phase-follicular">Follicular</span>
+          <span class="phase phase-ovulatory">Ovulatory</span>
+          <span class="phase phase-luteal">Luteal</span>
+          <span class="phase phase-menstrual">Menstrual</span>
+          <span class="cycle-marker" aria-hidden="true"></span>
+        </div>
+        <p class="cycle-caption">You're here · Late follicular (Day 10)</p>
+
+        <div class="cards">
+          <article class="card">
+            <span class="card-label">Today's focus</span>
+            <p class="card-value">Moderate intensity</p>
+            <p class="card-hint">Good day for skill + strength. Hold heavy plyos.</p>
+          </article>
+          <article class="card">
+            <span class="card-label">Recovery</span>
+            <p class="card-value">Sleep & hydration priority</p>
+            <p class="card-hint">8h sleep target. No back-to-back high-load days.</p>
+          </article>
+          <article class="card card-alert">
+            <span class="card-label">Injury awareness</span>
+            <p class="card-value">ACL risk elevated</p>
+            <p class="card-hint">Emphasize landing mechanics and neuromuscular control today.</p>
+          </article>
+          <article class="card card-wide">
+            <span class="card-label">S&C adjustment</span>
+            <p class="card-value">Neuromuscular control emphasis · Reduce plyometric volume</p>
+            <p class="card-hint">Aligns with your cycle phase and current load. Sync with your coach's plan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section how">
+      <div class="wrap">
+        <h2 class="section-label">Why Apex</h2>
+        <p class="section-title">Built for athletes who already have a plan</p>
+        <div class="features">
+          <article class="feature">
+            <div class="feature-icon">◇</div>
+            <h3>Cycle-aware, not generic</h3>
+            <p>Recommendations use your phase and load, not a one-size readiness score.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">◇</div>
+            <h3>Sync with your program</h3>
+            <p>We don't replace your coach. We layer on top so training matches your physiology.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">◇</div>
+            <h3>Injury risk in mind</h3>
+            <p>Designed with female physiology and ACL risk windows in mind—safety first.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cycle" class="section cycle-viz">
+      <div class="wrap">
+        <h2 class="section-label">Concept</h2>
+        <p class="section-title">How cycle and load connect</p>
+        <div class="viz-placeholder">
+          <p>HRV · RHR · injury risk patterns across your cycle</p>
+          <p class="viz-sub">(Data view placeholder)</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Apex — Cycle-aware training for elite athletes. Sync and adjust.</p>
+    </div>
+  </footer>
+</body>
+</html>
