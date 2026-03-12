@@ -192,6 +192,91 @@ a:hover {
   color: var(--text);
 }
 
+/* ----- Risk gauge ----- */
+.risk-row {
+  display: grid;
+  grid-template-columns: minmax(0, 260px) minmax(0, 1.5fr);
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.risk-gauge {
+  position: relative;
+  width: 220px;
+  height: 120px;
+  border-radius: 120px 120px 0 0;
+  background: conic-gradient(
+    from 180deg,
+    #16a34a 0deg,
+    #16a34a 60deg,
+    #fbbf24 60deg,
+    #fbbf24 120deg,
+    #f97316 120deg,
+    #ef4444 180deg
+  );
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.risk-arc {
+  position: absolute;
+  inset: 35%;
+  background: var(--bg);
+  border-radius: 999px;
+}
+
+.risk-needle {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 2px;
+  height: 90px;
+  background: var(--text);
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(-15deg);
+}
+
+.risk-center {
+  position: absolute;
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.risk-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.risk-score {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.risk-copy {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.risk-headline {
+  margin: 0 0 0.4rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.risk-text {
+  margin: 0;
+  line-height: 1.6;
+}
+
 /* ----- Cycle strip ----- */
 .cycle-strip {
   position: relative;
@@ -237,6 +322,63 @@ a:hover {
   font-size: 0.85rem;
   color: var(--text-muted);
   margin: 0 0 2rem;
+}
+
+/* ----- Week strip ----- */
+.week-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.week-day {
+  padding: 0.75rem 0.85rem;
+  border-radius: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.week-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.week-type {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text);
+  margin-top: 0.2rem;
+}
+
+.week-risk {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.45rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.week-risk-green {
+  background: rgba(22, 163, 74, 0.15);
+  color: #4ade80;
+}
+
+.week-risk-yellow {
+  background: rgba(245, 158, 11, 0.16);
+  color: #fbbf24;
+}
+
+.week-risk-red {
+  background: rgba(248, 113, 113, 0.16);
+  color: #fca5a5;
 }
 
 /* ----- Cards ----- */
@@ -293,6 +435,46 @@ a:hover {
 
 .card-wide {
   grid-column: 1 / -1;
+}
+
+/* ----- Phase panel ----- */
+.phase-panel {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.35rem;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.phase-panel-title {
+  margin: 0 0 1.2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.phase-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+.phase-column h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.phase-column ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.phase-column li + li {
+  margin-top: 0.25rem;
 }
 
 /* ----- Features ----- */
