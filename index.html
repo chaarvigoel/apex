@@ -44,12 +44,12 @@
             <div class="risk-needle"></div>
             <div class="risk-center">
               <span class="risk-label">Today's risk</span>
-              <span class="risk-score">Moderate</span>
+              <span id="readinessScore" class="risk-score">Moderate</span>
             </div>
           </div>
           <div class="risk-copy">
-            <p class="risk-headline">Neuromuscular load in the watch zone.</p>
-            <p class="risk-text">Recent training volume plus your late follicular phase puts ACL risk above baseline. We tighten plyo volume and emphasize control—not four days of forced rest.</p>
+            <p id="readinessHeadline" class="risk-headline">Neuromuscular load in the watch zone.</p>
+            <p id="readinessText" class="risk-text">Recent training volume plus your late follicular phase puts ACL risk above baseline. We tighten plyo volume and emphasize control—not four days of forced rest.</p>
           </div>
         </div>
 
@@ -61,44 +61,44 @@
           <span class="phase phase-menstrual">Menstrual</span>
           <span class="cycle-marker" aria-hidden="true"></span>
         </div>
-        <p class="cycle-caption">You're here · Late follicular (Day 10)</p>
+        <p id="cycleCaption" class="cycle-caption">You're here · Late follicular (Day 10)</p>
 
         <!-- Upcoming week preview -->
         <div class="week-strip">
-          <div class="week-day">
+          <div id="weekDay0" class="week-day">
             <span class="week-label">Mon</span>
-            <span class="week-type">Skill + strength</span>
-            <span class="week-risk week-risk-green">Stable</span>
+            <span id="weekType0" class="week-type">Skill + strength</span>
+            <span id="weekRisk0" class="week-risk week-risk-green">Stable</span>
           </div>
-          <div class="week-day">
+          <div id="weekDay1" class="week-day">
             <span class="week-label">Tue</span>
-            <span class="week-type">High-speed running</span>
-            <span class="week-risk week-risk-yellow">Watch</span>
+            <span id="weekType1" class="week-type">High-speed running</span>
+            <span id="weekRisk1" class="week-risk week-risk-yellow">Watch</span>
           </div>
-          <div class="week-day">
+          <div id="weekDay2" class="week-day">
             <span class="week-label">Wed</span>
-            <span class="week-type">Recovery</span>
-            <span class="week-risk week-risk-green">Stable</span>
+            <span id="weekType2" class="week-type">Recovery</span>
+            <span id="weekRisk2" class="week-risk week-risk-green">Stable</span>
           </div>
-          <div class="week-day">
+          <div id="weekDay3" class="week-day">
             <span class="week-label">Thu</span>
-            <span class="week-type">Change of direction</span>
-            <span class="week-risk week-risk-red">High</span>
+            <span id="weekType3" class="week-type">Change of direction</span>
+            <span id="weekRisk3" class="week-risk week-risk-red">High</span>
           </div>
-          <div class="week-day">
+          <div id="weekDay4" class="week-day">
             <span class="week-label">Fri</span>
-            <span class="week-type">Team session</span>
-            <span class="week-risk week-risk-yellow">Watch</span>
+            <span id="weekType4" class="week-type">Team session</span>
+            <span id="weekRisk4" class="week-risk week-risk-yellow">Watch</span>
           </div>
-          <div class="week-day">
+          <div id="weekDay5" class="week-day">
             <span class="week-label">Sat</span>
-            <span class="week-type">Match</span>
-            <span class="week-risk week-risk-red">High</span>
+            <span id="weekType5" class="week-type">Match</span>
+            <span id="weekRisk5" class="week-risk week-risk-red">High</span>
           </div>
-          <div class="week-day">
+          <div id="weekDay6" class="week-day">
             <span class="week-label">Sun</span>
-            <span class="week-type">Regeneration</span>
-            <span class="week-risk week-risk-green">Stable</span>
+            <span id="weekType6" class="week-type">Regeneration</span>
+            <span id="weekRisk6" class="week-risk week-risk-green">Stable</span>
           </div>
         </div>
 
@@ -106,23 +106,23 @@
         <div class="cards">
           <article class="card">
             <span class="card-label">Today's focus</span>
-            <p class="card-value">Moderate intensity</p>
-            <p class="card-hint">Good day for skill + strength. Hold heavy plyos.</p>
+            <p id="cardTrainingValue" class="card-value">Moderate intensity</p>
+            <p id="cardTrainingHint" class="card-hint">Good day for skill + strength. Hold heavy plyos.</p>
           </article>
           <article class="card">
             <span class="card-label">Recovery</span>
-            <p class="card-value">Sleep & hydration priority</p>
-            <p class="card-hint">8h sleep target. No back-to-back high-load days.</p>
+            <p id="cardRecoveryValue" class="card-value">Sleep & hydration priority</p>
+            <p id="cardRecoveryHint" class="card-hint">8h sleep target. No back-to-back high-load days.</p>
           </article>
           <article class="card card-alert">
             <span class="card-label">Injury awareness</span>
-            <p class="card-value">ACL risk elevated</p>
-            <p class="card-hint">Emphasize landing mechanics and neuromuscular control today.</p>
+            <p id="cardInjuryValue" class="card-value">ACL risk elevated</p>
+            <p id="cardInjuryHint" class="card-hint">Emphasize landing mechanics and neuromuscular control today.</p>
           </article>
           <article class="card card-wide">
             <span class="card-label">S&C adjustment</span>
-            <p class="card-value">Neuromuscular control emphasis · Reduce plyometric volume</p>
-            <p class="card-hint">Aligns with your cycle phase and current load. Sync with your coach's plan.</p>
+            <p id="cardSCValue" class="card-value">Neuromuscular control emphasis · Reduce plyometric volume</p>
+            <p id="cardSCHint" class="card-hint">Aligns with your cycle phase and current load. Sync with your coach's plan.</p>
           </article>
         </div>
 
@@ -154,6 +154,135 @@
                 <li>Late-night sessions before match</li>
               </ul>
             </article>
+          </div>
+        </section>
+
+        <!-- Rule-based Adjustment Engine (no ML) -->
+        <section class="engine">
+          <div class="engine-head">
+            <div>
+              <h3 class="engine-title">Cycle-Aware Training Adjustment Engine</h3>
+              <p class="engine-subtitle">Evidence-based rules first (no ML). Built for athletic trainers.</p>
+            </div>
+            <div class="mode-toggle" role="group" aria-label="View mode">
+              <button id="modeAthlete" type="button" class="mode-btn active" data-mode="athlete">Athlete view</button>
+              <button id="modeCoach" type="button" class="mode-btn" data-mode="coach">Coach view</button>
+            </div>
+          </div>
+
+          <div class="engine-grid">
+            <div class="engine-left">
+              <form id="checkinForm" class="engine-form">
+                <label class="field">
+                  <span class="field-label">Cycle phase</span>
+                  <select id="inputCyclePhase">
+                    <option>Early follicular</option>
+                    <option>Late follicular</option>
+                    <option>Ovulatory</option>
+                    <option>Early luteal</option>
+                    <option>Late luteal</option>
+                    <option>Menstrual</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Cycle day (1-28) for forecast</span>
+                  <input id="inputCycleDay" type="number" min="1" max="28" value="10" />
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Sleep quality</span>
+                  <select id="inputSleepQuality">
+                    <option value="good">Good</option>
+                    <option value="mixed" selected>Mixed</option>
+                    <option value="poor">Poor</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Soreness</span>
+                  <select id="inputSoreness">
+                    <option value="low">Low</option>
+                    <option value="moderate" selected>Moderate</option>
+                    <option value="high">High</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Fatigue</span>
+                  <select id="inputFatigue">
+                    <option value="low">Low</option>
+                    <option value="moderate" selected>Moderate</option>
+                    <option value="high">High</option>
+                  </select>
+                </label>
+
+                <div id="athleteFields" class="athlete-only">
+                  <div class="field">
+                    <span class="field-label">Symptoms</span>
+                    <label class="checkbox">
+                      <input id="inputCramps" type="checkbox" />
+                      <span>Cramps / discomfort</span>
+                    </label>
+                    <label class="checkbox">
+                      <input id="inputAlteredComfort" type="checkbox" />
+                      <span>Altered comfort</span>
+                    </label>
+                  </div>
+                </div>
+
+                <label class="field">
+                  <span class="field-label">Today’s session type</span>
+                  <select id="inputSessionType">
+                    <option value="sprint" selected>Sprint day</option>
+                    <option value="jump">Jump session</option>
+                    <option value="heavy">Heavy lift</option>
+                    <option value="strength">Strength + technique</option>
+                    <option value="match">Match / high-intensity</option>
+                  </select>
+                </label>
+
+                <div class="form-actions">
+                  <button id="btnLogCheckin" type="button" class="btn btn-primary btn-sm">Log check-in</button>
+                  <span id="logStatus" class="form-status" aria-live="polite"></span>
+                </div>
+              </form>
+            </div>
+
+            <div class="engine-right">
+              <div class="output card">
+                <span class="card-label">Readiness</span>
+                <p id="engineReadinessValue" class="output-readiness">Yellow</p>
+                <p id="engineRecoveryNote" class="output-text"></p>
+              </div>
+
+              <div class="output card">
+                <span class="card-label">Suggested training adjustment</span>
+                <p id="engineTrainingAdjustment" class="output-text"></p>
+              </div>
+
+              <div class="output card">
+                <span class="card-label">Rule reasons (standardized)</span>
+                <div id="engineRuleReasons" class="rule-tags"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="engine-foot">
+            <div class="forecast-block">
+              <h4 class="engine-section-title">Recovery window forecast (next 14 days)</h4>
+              <div id="forecastGrid" class="forecast-grid"></div>
+              <p class="engine-footnote">Forecast is rule-based using your current inputs as a baseline.</p>
+            </div>
+
+            <div class="pattern-block">
+              <h4 class="engine-section-title">Symptom pattern tracker (local)</h4>
+              <p class="engine-footnote">Logs check-ins in your browser. No ML; just transparency.</p>
+              <div class="pattern-summary" id="patternSummary"></div>
+              <div class="pattern-actions">
+                <button id="btnClearPattern" type="button" class="btn btn-clear">Clear local history</button>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -200,5 +329,7 @@
       <p>Apex — Cycle-aware training for elite athletes. Sync and adjust.</p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
